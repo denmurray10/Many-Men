@@ -4,7 +4,9 @@ body {
     /* Headings use Khmer */
     h1,
     h2,
-    h3 {
+    h3,
+    h4,
+    h5 {
         font-family: "Khmer", sans-serif;
         font-weight: 400;
     }
@@ -154,5 +156,70 @@ body {
     .card-overlay-text {
         padding: 0.5rem 1rem;
         text-align: center;
+    }
+
+    /* Edits to the Modal popup */
+    .modal-backdrop.show {
+        background-color: rgba(0, 0, 0, 0.8); /* darker overlay */
+    }
+
+    .modal-content {
+        background-color: #0d705b; /* Bootstrap “success” green */
+        color: #fff; /* keep text readable */
+        padding: 2rem;
+        font-family: monstar;
+    }
+
+    .modal-body {
+        padding: 1.5rem 0 0; /* adjust if you want different spacing for body */
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .btn-primary {
+        background-color: #ffffff;
+        border-color: #ffffff;
+        color: #000000;
+        margin-top: 20px;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+        background-color: #f0f0f0;
+        border-color: #f0f0f0;
+        color: #000000;
+    }
+
+    .modal-header {
+        border-bottom: 0; /* or border-bottom: none; */
+    }
+
+    .form-control {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #ffffff; /* white underline */
+        border-radius: 0;
+        color: #ffffff; /* form text in white */
+    }
+
+    .form-control:focus {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #ffffff;
+        box-shadow: none; /* remove blue glow */
+        outline: none;
+        color: #ffffff;
+    }
+
+    /* Placeholder text */
+    .form-control::placeholder {
+        color: #b3b3b3; /* light grey placeholder */
+        opacity: 1; /* ensure it’s not too faint (Firefox) */
+    }
+
+    /*Footer font edits */
+
+    .newsletterfont {
+        font-size: 0.75rem;
+        color: white;
     }
 }
