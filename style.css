@@ -107,4 +107,19 @@ body {
         height: auto;
         margin-left: 150px;
     }
+
+    .card-img {
+        object-fit: cover;
+        min-height: 250px;
+        max-height: 320px;
+    }
+
+    .card-img-overlay {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    }
+
+    .card-img-overlay p {
+        font-size: 1rem;
+        color: white;
+    }
 }
