@@ -43,7 +43,6 @@ body {
     /* Hero text */
     .hero-kicker {
         font-size: 3rem;
-        max-width: 550px;
         letter-spacing: -3px;
         line-height: 3rem;
         margin-top: 150px;
