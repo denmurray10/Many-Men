@@ -222,4 +222,105 @@ body {
         font-size: 0.75rem;
         color: white;
     }
+    /* Header and logo switch when they go over white backgrounds*/
+    /* Default: white text/logo (over dark hero) */
+    #mainNav .nav-link,
+    #mainNav .navbar-brand {
+        color: #ffffff;
+    }
+
+    #mainNav .nav-link:hover {
+        color: #e5e5e5;
+    }
+
+    #mainNav .btn.btn-outline-light {
+        color: #ffffff;
+        border-color: #ffffff;
+    }
+
+    /* Hide black logo by default */
+    .logo-black {
+        display: none;
+    }
+
+    /* When navbar is over white background */
+    #mainNav.navbar-on-white .nav-link,
+    #mainNav.navbar-on-white .navbar-brand {
+        color: #000000;
+    }
+
+    #mainNav.navbar-on-white .nav-link:hover {
+        color: #222222;
+    }
+
+    #mainNav.navbar-on-white .btn.btn-outline-light {
+        color: #000000;
+        border-color: #000000;
+    }
+
+    /* Swap logo variants */
+    #mainNav.navbar-on-white .logo-white {
+        display: none;
+    }
+    #mainNav.navbar-on-white .logo-black {
+        display: inline-block;
+    }
+
+    /* Default navbar over hero (no light background) */
+    #mainNav {
+        background: transparent;
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    /* Default: white text/logo (over dark hero) */
+    #mainNav .nav-link,
+    #mainNav .navbar-brand {
+        color: #ffffff;
+    }
+
+    #mainNav .nav-link:hover {
+        color: #e5e5e5;
+    }
+
+    #mainNav .btn.btn-outline-light {
+        color: #ffffff;
+        border-color: #ffffff;
+    }
+
+    /* Logo variants: show white by default */
+    .logo-black {
+        display: none;
+    }
+
+    /* When navbar is over white background (class added by JS) */
+    #mainNav.navbar-on-white {
+        background: linear-gradient(
+            to bottom,
+            rgba(240, 240, 240, 0.4),
+            rgba(220, 220, 220, 0.2)
+        );
+        backdrop-filter: blur(4px); /* optional soft glass effect */
+    }
+
+    #mainNav.navbar-on-white .nav-link,
+    #mainNav.navbar-on-white .navbar-brand {
+        color: #000000;
+    }
+
+    #mainNav.navbar-on-white .nav-link:hover {
+        color: #222222;
+    }
+
+    #mainNav.navbar-on-white .btn.btn-outline-light {
+        color: #000000;
+        border-color: #000000;
+    }
+
+    /* Swap logos when on white background */
+    #mainNav.navbar-on-white .logo-white {
+        display: none;
+    }
+    #mainNav.navbar-on-white .logo-black {
+        display: inline-block;
+    }
 }
