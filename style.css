@@ -158,6 +158,28 @@ body {
         text-align: center;
     }
 
+    .card-img-padding {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 0.5rem;
+        min-height: 275px;
+        min-width: none;
+    }
+
+    .card-body p {
+        font-size: 1rem;
+        line-height: 1.2rem;
+        padding: 1rem;
+    }
+
+    .card-title {
+        font-family: "Khmer", sans-serif;
+        letter-spacing: -2px;
+        font-size: 2rem;
+        padding-top: 1rem;
+        padding-left: 1.75rem;
+    }
+
     /* Edits to the Modal popup */
     .modal-backdrop.show {
         background-color: rgba(0, 0, 0, 0.8); /* darker overlay */
