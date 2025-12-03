@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Macondo&family=Noto+Sans+Khmer:wght@100..900&family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Macondo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Khmer:wght@100..900&family=Oswald:wght@200..700&display=swap");
+body {
+    /* Headings use Khmer */
+    h1,
+    h2,
+    h3 {
+        font-family: "Khmer", sans-serif;
+        font-weight: 400;
+    }
+
+    /* Paragraphs use Montserrat */
+    p {
+        font-family: "Montserrat", sans-serif;
+        color: #222;
+    }
+
+    /* Navbar over hero */
+    .hero-header .navbar {
+        background: transparent;
+        z-index: 100;
+    }
+
+    /* Hero base */
+    .hero {
+        min-height: 100vh;
+        padding-top: 8rem; /* space for fixed navbar */
+        padding-bottom: 10rem;
+        background-image: url("assets/images/heroimageblackfilter.webp"); /* Main hero image*/
+        background-size: cover;
+        background-position: center center;
+        color: #fff;
+    }
+
+    /* Hero text */
+    .hero-kicker {
+        font-size: 3rem;
+        max-width: 550px;
+        letter-spacing: -3px;
+        line-height: 3rem;
+        margin-top: 150px;
+    }
+
+    .hero-small-text {
+        font-size: 1.7rem;
+        max-width: 450px;
+        margin-left: auto;
+        margin-top: 400px;
+        text-align: left;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    @media (min-width: 768px) {
+        .hero-title {
+            font-size: 13rem;
+            min-width: 1150px;
+            letter-spacing: -15px;
+            text-align: center;
+        }
+    }
+
+    /* Navbar Positoning */
+    .overlay {
+        z-index: 100;
+    }
+
+    /* Navbar link styles */
+    .navbar-nav .nav-link {
+        font-size: 1.2rem;
+        margin-right: 1.5rem;
+    }
+
+    /* Get Help button look */
+    .navbar .btn-light {
+        border-radius: 999px;
+        font-size: 0.9rem;
+    }
+
+    /* Hero primary button */
+    .hero .btn-success {
+        background-color: #2b7b5b;
+        border-color: #2b7b5b;
+    }
+
+    .hero .btn-success:hover {
+        background-color: #23614a;
+        border-color: #23614a;
+    }
+
+    /* Hero secondary button */
+    .btn-success {
+        margin-top: 10px;
+    }
+}
