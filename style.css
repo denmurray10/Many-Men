@@ -13,6 +13,14 @@ body {
     p {
         font-family: "Montserrat", sans-serif;
         color: #222;
+        font-size: 1.25rem;
+    }
+
+    .infocontent {
+        font-size: 1.5rem;
+        color: #2b7b5b;
+        font-weight: 600;
+        line-height: 30px;
     }
 
     /* Navbar over hero */
@@ -93,5 +101,11 @@ body {
     /* Hero secondary button */
     .btn-success {
         margin-top: 10px;
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+        margin-left: 150px;
     }
 }
