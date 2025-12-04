@@ -113,7 +113,6 @@ body {
     .card-img {
         object-fit: cover;
         min-height: 250px;
-        max-height: 320px;
     }
 
     .card-img-overlay {
@@ -123,6 +122,7 @@ body {
     .card-img-overlay p {
         font-size: 1rem;
         color: white;
+        padding: 1.75rem;
     }
 
     .img-card {
@@ -178,6 +178,22 @@ body {
         font-size: 2rem;
         padding-top: 1rem;
         padding-left: 1.75rem;
+    }
+
+    .solotitle {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+        text-align: center;
+        padding-top: 35%;
+    }
+
+    .blockwriting {
+        padding: 3.5rem;
+    }
+
+    .block-background {
+        background-color: #faf5df;
+        border-radius: 5px;
     }
 
     /* Edits to the Modal popup */
