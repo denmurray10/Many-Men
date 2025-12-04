@@ -65,7 +65,7 @@ body {
     @media (min-width: 768px) {
         .hero-title {
             font-size: 13rem;
-            min-width: 1150px;
+            min-width: 800px;
             letter-spacing: -15px;
             text-align: center;
         }
@@ -107,7 +107,7 @@ body {
     .img-fluid {
         max-width: 100%;
         height: auto;
-        margin-left: 150px;
+        margin-left: 50px;
     }
 
     .card-img {
