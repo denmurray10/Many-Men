@@ -415,11 +415,54 @@ body {
         font-size: 3.5rem;
         line-height: 3.5rem;
         text-align: center;
-        padding-top: 35%;
+        color: #0d705b;
+        align-content: center;
+    }
+    @media (min-width: 769px) {
+        .solotitle {
+            font-size: 3.5rem;
+            line-height: 3rem;
+            text-align: center;
+            color: #0d705b;
+            align-content: center;
+            padding-top: 40px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .solotitle {
+            font-size: 4.5rem;
+            line-height: 4rem;
+            text-align: center;
+            color: #0d705b;
+            align-content: center;
+            padding-top: 60px;
+        }
     }
 
     .blockwriting {
         padding: 3.5rem;
+    }
+
+    @media (min-width: 768px) and (max-width: 992px) {
+        .blockwriting {
+            font-size: 0.9rem;
+            padding: 1.5rem;
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1200px) {
+        .blockwriting {
+            font-size: 1.2rem;
+            padding: 1.5rem;
+        }
+    }
+
+    @media (min-width: 1200px) and (max-width: 1400px) {
+        .blockwriting {
+            font-size: 1.2rem;
+            padding: 1.5rem;
+        }
     }
 
     .block-background {
@@ -602,18 +645,100 @@ body {
     .banner {
         text-align: left !important;
     }
-
+    /* Key Numbers text changes */
     .green {
         color: #0d705b;
     }
     .green h4 {
         font-size: 5rem;
         font-family: "Khmer", sans-serif;
+        text-align: center;
+        align-items: center;
+        align-content: center;
     }
+
+    .green h4 {
+        font-size: 5rem;
+        font-family: "Khmer", sans-serif;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    @media (min-width: 769px) {
+        .green h4 {
+            font-size: 5rem;
+            font-family: "Khmer", sans-serif;
+            text-align: right;
+            align-items: center;
+            align-content: center;
+        }
+    }
+    /* Column restructure for  */
     .col-9 {
         align-content: center;
         font-size: 1.5rem;
         font-family: "Montserrat", sans-serif;
         font-weight: 600;
+    }
+
+    .helptext {
+        font-weight: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        align-content: center;
+        font-weight: 600;
+        padding-left: 30px;
+        padding-right: 30px;
+        line-height: 1.5rem;
+    }
+
+    @media (max-width: 575px) {
+        .helptext {
+            font-weight: "Montserrat", sans-serif;
+            font-size: 1.5rem;
+            align-content: center;
+            font-weight: 600;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 10px;
+            padding-bottom: 30px;
+            line-height: 1.5rem;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .helptext {
+            font-weight: "Montserrat", sans-serif;
+            font-size: 1.5rem;
+            align-content: center;
+            font-weight: 600;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 10px;
+            padding-bottom: 30px;
+            line-height: 1.5rem;
+            text-align: center;
+        }
+    }
+
+    @media (min-width: 769px) {
+        .helptext {
+            font-weight: "Montserrat", sans-serif;
+            font-size: 1.2rem;
+            align-content: center;
+            font-weight: 600;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 10px;
+            padding-bottom: 30px;
+            line-height: 1.5rem;
+            text-align: left;
+        }
+    }
+
+    .struggle {
+        margin-top: 10px;
+        margin-bottom: 30px;
     }
 }
