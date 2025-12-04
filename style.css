@@ -18,6 +18,16 @@ body {
         font-size: 1.25rem;
     }
 
+    @media (max-width: 575px) {
+        p {
+            font-family: "Montserrat", sans-serif;
+            color: #222;
+            font-size: 1.25rem;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+
     .infocontent {
         font-size: 1.5rem;
         color: #2b7b5b;
@@ -42,12 +52,104 @@ body {
         color: #fff;
     }
 
-    /* Hero text */
+    @media (max-width: 575px) {
+        .hero {
+            min-height: 100vh;
+            padding-top: 8rem; /* space for fixed navbar */
+            padding-bottom: 10rem;
+            background-image: url("./assets/images/mobile\ hero\ image.webp"); /* Main hero image*/
+            background-size: cover;
+            background-position: center center;
+            color: #fff;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            min-height: 100vh;
+            padding-top: 8rem; /* space for fixed navbar */
+            padding-bottom: 10rem;
+            background-image: url("./assets/images/mobile\ hero\ image.webp"); /* Main hero image*/
+            background-size: cover;
+            background-position: center center;
+            color: #fff;
+        }
+    }
+
+    /* Hero text & Main Headings */
     .hero-kicker {
         font-size: 3rem;
         letter-spacing: -3px;
         line-height: 3rem;
         margin-top: 150px;
+        text-align: center;
+    }
+
+    @media (min-width: 1400px) {
+        .hero-kicker {
+            font-size: 4.5rem;
+            letter-spacing: -3px;
+            line-height: 4rem;
+            margin-top: 150px;
+            padding-bottom: 50px;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 1399px) {
+        .hero-kicker {
+            font-size: 4.5rem;
+            letter-spacing: -3px;
+            line-height: 4rem;
+            margin-top: 150px;
+            padding-bottom: 50px;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .hero-kicker {
+            font-size: 4.5rem;
+            letter-spacing: -3px;
+            line-height: 4rem;
+            margin-top: 150px;
+            padding-bottom: 50px;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .hero-kicker {
+            font-size: 3.5rem;
+            letter-spacing: -3px;
+            line-height: 4rem;
+            margin-top: 150px;
+            padding-bottom: 50px;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero-kicker {
+            font-size: 3.5rem;
+            letter-spacing: -3px;
+            line-height: 4rem;
+            margin-top: 50px;
+            text-align: center;
+        }
+    }
+
+    /* Hero Text Mobile*/
+    @media (max-width: 575px) {
+        .hero-kicker {
+            font-size: 3rem;
+            letter-spacing: -3px;
+            line-height: 3rem;
+            margin-top: 50px;
+
+            padding-left: 30px;
+            padding-right: 30px;
+        }
     }
 
     .hero-small-text {
@@ -58,16 +160,79 @@ body {
         text-align: left;
     }
 
-    .hero-title {
-        font-size: 3rem;
+    @media (max-width: 575px) {
+        .hero-small-text {
+            font-size: 1.7rem;
+            margin-left: 0;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            text-align: left;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
     }
 
-    @media (min-width: 768px) {
+    @media (max-width: 768px) {
+        .hero-small-text {
+            font-size: 1.7rem;
+            margin-left: 0;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            text-align: left;
+            padding-right: 30px;
+        }
+    }
+
+    /* Men Matter responsive resizing */
+
+    @media (min-width: 1400px) {
         .hero-title {
-            font-size: 13rem;
-            min-width: 800px;
+            font-size: 220px;
             letter-spacing: -15px;
             text-align: center;
+        }
+    }
+
+    @media (max-width: 1400px) {
+        .hero-title {
+            font-size: 220px;
+            letter-spacing: -15px;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .hero-title {
+            font-size: 11rem;
+            min-width: 100px;
+            letter-spacing: -15px;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .hero-title {
+            font-size: 10rem;
+            letter-spacing: -15px;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero-title {
+            font-size: 9rem;
+            letter-spacing: -15px;
+            text-align: center;
+            display: none;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .hero-title {
+            font-size: 6rem;
+            letter-spacing: 0;
+            text-align: center;
+            display: none;
         }
     }
 
@@ -108,6 +273,72 @@ body {
         max-width: 100%;
         height: auto;
         margin-left: 50px;
+    }
+
+    @media (min-width: 1400px) {
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            margin-left: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 20px;
+        }
+    }
+
+    @media (max-width: 1399px) {
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            margin-left: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 20px;
+        }
+    }
+
+    @media (max-width: 1999x) {
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            margin-left: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 20px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            margin-left: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 20px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            margin-left: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 20px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            margin-left: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 20px;
+        }
     }
 
     .card-img {
@@ -361,5 +592,9 @@ body {
     }
     #mainNav.navbar-on-white .logo-black {
         display: inline-block;
+    }
+
+    .banner {
+        text-align: left !important;
     }
 }
