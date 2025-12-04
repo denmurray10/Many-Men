@@ -533,6 +533,12 @@ body {
     .newsletterfont {
         font-size: 0.75rem;
         color: white;
+        text-align: left !important;
+        padding: 0px;
+    }
+
+    .small {
+        padding: 0px;
     }
     /* Header and logo switch when they go over white backgrounds*/
     /* Default: white text/logo (over dark hero) */
@@ -740,5 +746,16 @@ body {
     .struggle {
         margin-top: 10px;
         margin-bottom: 30px;
+    }
+
+    /* Auto-hide navbar: slide + fade over 2s */
+    #mainNav {
+        transition: transform 0.6s ease, opacity 2s ease;
+        opacity: 1;
+    }
+
+    .nav-auto-hidden {
+        transform: translateY(-100%);
+        opacity: 0;
     }
 }

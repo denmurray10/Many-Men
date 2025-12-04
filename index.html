@@ -5,31 +5,70 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Many Men - Men Matter</title>
+
     <!-- Meta description -->
     <meta name="description"
         content="A calm, straight-talking space helping men in the UK recognise signs of struggle, find support, and take the first step toward better mental health.">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     <!-- Your custom CSS -->
     <link href="style.css" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="./assets/images/Favicon.svg">
 
+    <!-- Testimonial image card styles + auto-hide navbar -->
+    <style>
+        .img-card {
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            border: none;
+        }
+
+        .img-card .card-img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .card-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease;
+            text-align: center;
+            padding: 0.5rem 1rem;
+        }
+
+        .img-card:hover .card-overlay {
+            opacity: 1;
+        }
+
+        /* Auto-hide navbar class */
+        .nav-auto-hidden {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+    </style>
 </head>
 
 <body>
 
     <header class="hero-header">
-
         <!-- Navbar -->
-
         <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top overlay">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="#">
                     <!-- White logo (for dark/hero background) -->
                     <img src="./assets/images/Sophisticated logo 3.svg" alt="Many Men Logo" class="me-2 logo-white"
                         style="height: 80px;">
-
                     <!-- Black logo (for white background) -->
                     <img src="./assets/images/Sophisticated logo 3 Black.svg" alt="Many Men Logo"
                         class="me-2 logo-black" style="height: 80px;">
@@ -46,7 +85,7 @@
                         <li class="nav-item"><a class="nav-link" href="#Statistics">Statistics</a></li>
                         <li class="nav-item"><a class="nav-link" href="#signs">Signs</a></li>
                         <li class="nav-item"><a class="nav-link" href="#Testimonials">Testimonials</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#get-help">Contact</a></li>
                     </ul>
 
                     <a href="#get-help" class="btn btn-outline-light px-4 rounded-pill">
@@ -55,37 +94,34 @@
                 </div>
             </div>
         </nav>
-    </header>
 
-    <!-- Hero section -->
-
-    <section id="hero" class="hero d-flex align-items-end">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-7 col-lg-6">
-                    <h2 class="hero-kicker mb-2 banner">
-                        A calm, straight-talking space helping many men find their footing
-                    </h2>
+        <!-- Hero section -->
+        <section id="hero" class="hero d-flex align-items-end">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-7 col-lg-6">
+                        <h2 class="hero-kicker mb-2 banner">
+                            A calm, straight-talking space helping many men find their footing
+                        </h2>
+                    </div>
+                    <div class="col-12 col-md-5 col-lg-6 text-md-end mt-4 mt-md-0">
+                        <h3 class="hero-small-text">
+                            Taking one small step for your mind today can change the whole
+                            shape of your tomorrow.
+                        </h3>
+                    </div>
                 </div>
-                <div class="col-12 col-md-5 col-lg-6 text-md-end mt-4 mt-md-0">
-                    <h3 class="hero-small-text">
-                        Taking one small step for your mind today can change the whole
-                        shape of your tomorrow.
-                    </h3>
+
+                <div class="row mt-4 justify-content-center text-center">
+                    <div class="col-12 col-md-12">
+                        <h1 class="display-3 hero-title">Men Matter</h1>
+                    </div>
                 </div>
             </div>
-
-            <div class="row mt-4 justify-content-center text-center">
-                <div class="col-12 col-md-12">
-                    <h1 class="display-3 hero-title">Men Matter</h1>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
     </header>
 
-    <!-- Main content placeholder -->
-
+    <!-- About section -->
     <section class="d-flex align-items-end">
         <div class="container">
             <div class="row">
@@ -93,17 +129,24 @@
                     <h2 id="about" class="hero-kicker mb-2 banner">
                         It’s Not Weak to Speak – It’s<br> How Recovery Starts.
                     </h2>
+                </div>
+            </div>
+        </div>
     </section>
+
     <section class="d-flex align-items-end">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-5">
-                    <p>When men get the right support, things can change quickly for the better. Talking, learning new
+                    <p>
+                        When men get the right support, things can change quickly for the better. Talking, learning new
                         tools and feeling backed by others helps many men feel more in control, less alone and more
-                        hopeful about the future, so they can show up more fully at home, at work and in themselves.</p>
-                    <p class="infocontent">Reaching out for support is a sign of strength, not weakness, and you don’t
-                        have to do this on
-                        your own</p>
+                        hopeful about the future, so they can show up more fully at home, at work and in themselves.
+                    </p>
+                    <p class="infocontent">
+                        Reaching out for support is a sign of strength, not weakness, and you don’t
+                        have to do this on your own.
+                    </p>
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-7">
                     <img src="./assets/images/Man drinking coffee.png" class="img-fluid coffeeman"
@@ -113,8 +156,7 @@
         </div>
     </section>
 
-    <!--Key Numbers for men in the UK-->
-
+    <!-- Key Numbers for men in the UK -->
     <section class="d-flex align-items-end">
         <div class="container">
             <div class="row">
@@ -122,6 +164,9 @@
                     <h2 id="Statistics" class="hero-kicker mb-2">
                         Key numbers for men in the UK
                     </h2>
+                </div>
+            </div>
+        </div>
     </section>
 
     <div class="container">
@@ -129,32 +174,31 @@
             <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 green">
                 <h4>12.5%</h4>
             </div>
-            <div class="col-12 col-sm-12 col-md-8 col-lg-9 col-lx-9 col-xxl-9 helptext">Of men in England have a
-                diagnosed mental
-                health disorder, and surveys
-                suggest many more
-                experience symptoms but never seek support.</div>
+            <div class="col-12 col-sm-12 col-md-8 col-lg-9 col-xl-9 col-xxl-9 helptext">
+                Of men in England have a diagnosed mental
+                health disorder, and surveys suggest many more
+                experience symptoms but never seek support.
+            </div>
             <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 text-end green">
                 <h4>1 in 8</h4>
             </div>
-            <div class="col-12 col-sm-12 col-md-8 col-lg-9 col-lx-9 col-xxl-9 helptext">Men are thought to be living
-                with a
-                common
-                mental health problem such as depression or
-                anxiety at any one time.</div>
+            <div class="col-12 col-sm-12 col-md-8 col-lg-9 col-xl-9 col-xxl-9 helptext">
+                Men are thought to be living with a
+                common mental health problem such as depression or
+                anxiety at any one time.
+            </div>
             <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 text-end green">
                 <h4>75%</h4>
             </div>
-            <div class="col-12 col-sm-12 col-md-8 col-lg-9 col-lx-9 col-xxl-9 helptext">Of people who die by suicide in
-                the UK
-                are
-                men, and suicide is the single leading cause
-                of death for men under 50.</div>
+            <div class="col-12 col-sm-12 col-md-8 col-lg-9 col-xl-9 col-xxl-9 helptext">
+                Of people who die by suicide in
+                the UK are men, and suicide is the single leading cause
+                of death for men under 50.
+            </div>
         </div>
     </div>
 
-    <!-- Signs of struggle --->
-
+    <!-- Signs of struggle cards -->
     <div id="signs" class="container my-5">
         <div class="row justify-content-center g-4">
 
@@ -195,7 +239,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Body Changes</h5>
                     </div>
-                    <img src="./assets/images/Body Changes.webp" class="card-img-top card-img-padding" alt="...">
+                    <img src="./assets/images/Body Changes.webp" class="card-img-top card-img-padding"
+                        alt="Body changes">
                     <div class="card-body">
                         <p class="card-text">
                             Noticeable changes in appetite, weight, energy levels, or unexplained
@@ -208,8 +253,7 @@
         </div>
     </div>
 
-    <!--Title text for Signs of struggle -->
-
+    <!-- Title text for Signs of struggle -->
     <section class="d-flex align-items-end">
         <div class="container">
             <div class="row">
@@ -223,16 +267,13 @@
     </section>
 
     <!-- Grid block with title text and image overlay cards -->
-
     <section class="py-5">
         <div class="container">
 
             <!-- Row 1: title + 2 image overlay cards -->
-
             <div class="row g-4 align-items-stretch">
 
                 <!-- 1: Title / Text block -->
-
                 <div class="col-12 col-sm-12 col-md-12 col-lg-4 d-flex">
                     <div class="p-4 text-black w-100">
                         <h2 class="h1 mb-2 solotitle">What can you do to help?</h2>
@@ -240,7 +281,6 @@
                 </div>
 
                 <!-- 2: Image overlay card -->
-
                 <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 d-flex">
                     <div class="card text-white w-100">
                         <img src="./assets/images/donate img.webp" class="card-img border-card"
@@ -256,7 +296,6 @@
                 </div>
 
                 <!-- 3: Image overlay card -->
-
                 <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 d-flex">
                     <div class="card text-white w-100">
                         <img src="./assets/images/Participate.webp" class="card-img" alt="Man walking outside">
@@ -271,13 +310,8 @@
                 </div>
             </div>
 
-            <!-- Row 2: wide yellow text + 1 image overlay card -->
-
+            <!-- Row 2: image overlay card + wide yellow text -->
             <div class="row g-4 align-items-stretch mt-4">
-
-                <!-- Big yellow text block (takes first 2 card widths) -->
-
-                <!-- Single image overlay card (same style as above) -->
 
                 <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 d-flex">
                     <div class="card text-white w-100">
@@ -292,7 +326,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Big yellow text block (takes first 2 card widths) -->
 
                 <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8 col-xxl-8 d-flex">
                     <div class="p-2 block-background text-dark w-100">
@@ -311,25 +344,30 @@
         </div>
     </section>
 
-    <!--You dont have to do this alone section-->
-
-    <section class="d-flex align-items-end">
+    <!-- You don't have to do this alone section -->
+    <section class="d-flex align-items-end" id="get-help">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-12">
                     <h2 class="hero-kicker mb-2 banner">
                         You Don’t Have to Do This Alone
                     </h2>
+                </div>
+            </div>
+        </div>
     </section>
+
     <section class="d-flex align-items-end">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-5">
-                    <p>You Don’t Have to Do This Alone means there is always someone who can listen, support, and guide
+                    <p>
+                        You Don’t Have to Do This Alone means there is always someone who can listen, support, and guide
                         you through what you’re facing. Reaching out is not a sign of weakness; it is a sign that you
                         are taking your mental health seriously and giving yourself a chance to feel better. You deserve
                         support just as much as anyone else, whether you are feeling low, stressed, numb, angry, or
-                        simply “not yourself.”</p>
+                        simply “not yourself.”
+                    </p>
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-7">
                     <img src="./assets/images/You dont have to do this alone banner img.webp" class="img-fluid"
@@ -339,7 +377,7 @@
         </div>
     </section>
 
-    <!--Testimnonal Heading-->
+    <!-- Testimonial heading -->
     <section class="d-flex align-items-end">
         <div class="container">
             <div class="row">
@@ -353,62 +391,14 @@
         </div>
     </section>
 
-    <!-- Testimonal grid  -->
-    <!doctype html>
-    <html lang="en">
-
-    <head>
-        <meta charset="utf-8">
-        <title>Five Cards With Modals</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!-- Bootstrap 5 CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-        <style>
-            .img-card {
-                position: relative;
-                cursor: pointer;
-                overflow: hidden;
-                border: none;
-            }
-
-            .img-card .card-img {
-                display: block;
-                width: 100%;
-                height: auto;
-            }
-
-            .card-overlay {
-                position: absolute;
-                inset: 0;
-                background: rgba(0, 0, 0, 0.6);
-                color: #fff;
-                opacity: 0;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transition: opacity 0.3s ease;
-                text-align: center;
-                padding: 0.5rem 1rem;
-            }
-
-            .img-card:hover .card-overlay {
-                opacity: 1;
-            }
-        </style>
-    </head>
-
-
-
+    <!-- Testimonial grid -->
     <div class="container my-5">
         <div class="row row-cols-2 row-cols-md-5 g-3 text-center">
 
             <!-- Card 1 -->
-
             <div class="col">
                 <div class="card img-card" data-bs-toggle="modal" data-bs-target="#card1Modal">
-                    <img src="./assets/images/testi1.webp" class="card-img" alt="Card 1">
+                    <img src="./assets/images/testi1.webp" class="card-img" alt="Daniel Morris">
                     <div class="card-overlay">
                         <span>Daniel Morris</span>
                     </div>
@@ -416,10 +406,9 @@
             </div>
 
             <!-- Card 2 -->
-
             <div class="col">
                 <div class="card img-card" data-bs-toggle="modal" data-bs-target="#card2Modal">
-                    <img src="./assets/images/testi2.webp" class="card-img" alt="Card 2">
+                    <img src="./assets/images/testi2.webp" class="card-img" alt="Mark Jensen">
                     <div class="card-overlay">
                         <span>Mark Jensen</span>
                     </div>
@@ -427,7 +416,6 @@
             </div>
 
             <!-- Card 3 -->
-
             <div class="col">
                 <div class="card img-card" data-bs-toggle="modal" data-bs-target="#card3Modal">
                     <img src="./assets/images/testi3.webp" class="card-img" alt="Card 3">
@@ -438,7 +426,6 @@
             </div>
 
             <!-- Card 4 -->
-
             <div class="col">
                 <div class="card img-card" data-bs-toggle="modal" data-bs-target="#card4Modal">
                     <img src="./assets/images/testi4.webp" class="card-img" alt="Card 4">
@@ -449,7 +436,6 @@
             </div>
 
             <!-- Card 5 -->
-
             <div class="col">
                 <div class="card img-card" data-bs-toggle="modal" data-bs-target="#card5Modal">
                     <img src="./assets/images/testi5.webp" class="card-img" alt="Card 5">
@@ -458,11 +444,11 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 
-    <!-- Modals -->
-
+    <!-- Modals (unchanged content) -->
     <div class="modal fade" id="card1Modal" tabindex="-1" aria-labelledby="card1Label" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -477,7 +463,6 @@
                     for men’s mental health support that didn’t feel clinical or judgmental and came across Many Men.
                     The language was simple, honest, and it sounded like it actually understood what blokes go
                     through.<br><br>
-
                     I started by reading the short guides and trying some of the breathing and grounding techniques
                     before bed, and for the first time in years I felt like my head was quietening down a bit. I then
                     used the site to find local support and booked an appointment with my GP, something I’d put off for
@@ -504,7 +489,6 @@
                     friend’s social media post about men’s mental health and clicked it late one night when I couldn’t
                     sleep. The site felt calm and straightforward, not preachy, and it was the first place that
                     explained what I was feeling in a way that actually made sense to me.<br><br>
-
                     I started using some of the quick techniques on my lunch break and before bed, and slowly the
                     constant tightness in my chest began to ease. The guidance on how to talk to my GP gave me the words
                     I didn’t have, and I finally booked an appointment instead of cancelling again. With support, and by
@@ -530,7 +514,6 @@
                     practical advice for men with anxiety and clicked because it didn’t feel like a typical clinical
                     site. The way it spoke directly to men who bottle things up made me feel seen rather than
                     judged.<br><br>
-
                     I tried some of the simple breathing and grounding exercises during panic moments and they helped me
                     get through work days that used to feel impossible. Reading other men’s stories and the clear steps
                     on where to get help gave me the courage to tell a close friend what was really going on and to
@@ -555,7 +538,6 @@
                     and long days in bed. One afternoon, my daughter sent me a link to Many Men and said I might find it
                     useful. At first I was defensive, but I opened it later that night and was surprised to see a space
                     that spoke honestly about the pressure men feel to always be strong.<br><br>
-
                     I read through the guidance on low mood and finances, and used the suggested steps to contact my GP
                     and a local support service. The small daily techniques on the site helped me get out of the house,
                     organise my day, and slowly cut down on alcohol. I’m now volunteering part-time, rebuilding my
@@ -581,7 +563,6 @@
                     Men through a mental health link on my university’s website and clicked because it mentioned support
                     specifically for men. The tone felt real and straightforward, like someone talking to me, not at
                     me.<br><br>
-
                     I used the short-term coping tools before exams and on days when getting out of bed felt impossible,
                     and they helped bring everything down from a 10 to something I could manage. The clear signposting
                     to helplines and online support meant I could chat to someone anonymously at first, which made
@@ -595,7 +576,6 @@
     </div>
 
     <!-- Footer -->
-
     <footer class="mt-5">
         <div class="container-fluid py-5" style="background-color: #0D705B;">
             <div class="container text-white">
@@ -639,9 +619,9 @@
                             </li>
                             <li><a href="https://instagram.com/" class="text-white text-decoration-none">Instagram</a>
                             </li>
-                            <li><a href="https://linkedin.com/" class="text-white text-decoration-none">Linkedin</a>
+                            <li><a href="https://linkedin.com/" class="text-white text-decoration-none">LinkedIn</a>
                             </li>
-                            <li><a href="https://pintrest.com/" class="text-white text-decoration-none">Pinterest</a>
+                            <li><a href="https://pinterest.com/" class="text-white text-decoration-none">Pinterest</a>
                             </li>
                         </ul>
                     </div>
@@ -726,26 +706,32 @@
         </div>
     </div>
 
-    <!-- JS for modal success message -->
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- Combined custom JS: nav colour, auto-hide, close on link click, newsletter -->
     <script>
+        // Newsletter success message
         const newsletterForm = document.getElementById('newsletterForm');
         const newsletterSuccess = document.getElementById('newsletterSuccess');
 
-        newsletterForm.addEventListener('submit', function (e) {
-            e.preventDefault(); // stop actual submit for now
-
-            // Here you would normally send the data via fetch/AJAX.
-            // After a successful response, show the message:
-            newsletterSuccess.classList.remove('d-none');
+        if (newsletterForm && newsletterSuccess) {
+            newsletterForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                newsletterSuccess.classList.remove('d-none');
+            });
         }
-        );
-    </script>
 
-    <script>
         const nav = document.getElementById('mainNav');
-        const hero = document.getElementById('hero'); // your top hero section
+        const hero = document.getElementById('hero');
+        const navbarCollapse = document.getElementById('mainNavbar');
+        const navLinks = document.querySelectorAll('#mainNavbar .nav-link');
 
+        // 1) Change navbar style after hero
         function updateNav() {
+            if (!nav || !hero) return;
             const heroBottom = hero.offsetTop + hero.offsetHeight;
             const scrollPos = window.scrollY || window.pageYOffset;
 
@@ -758,12 +744,45 @@
 
         window.addEventListener('scroll', updateNav);
         window.addEventListener('load', updateNav);
-    </script>
 
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+        // 2) Auto-hide navbar after 6s idle
+        let hideTimeout = null;
+
+        function resetNavHideTimer() {
+            if (!nav) return;
+
+            // Show navbar
+            nav.classList.remove('nav-auto-hidden');
+
+            // Clear old timer
+            if (hideTimeout) {
+                clearTimeout(hideTimeout);
+            }
+
+            // Start new 6s timer
+            hideTimeout = setTimeout(() => {
+                nav.classList.add('nav-auto-hidden');
+            }, 6000);
+        }
+
+        ['scroll', 'mousemove', 'keydown', 'touchstart'].forEach(eventType => {
+            window.addEventListener(eventType, resetNavHideTimer, { passive: true });
+        });
+
+        window.addEventListener('load', resetNavHideTimer);
+
+        // 3) Close mobile nav on link click
+        if (navbarCollapse) {
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                    if (bsCollapse && navbarCollapse.classList.contains('show')) {
+                        bsCollapse.hide();
+                    }
+                });
+            });
+        }
+    </script>
 
 </body>
 
